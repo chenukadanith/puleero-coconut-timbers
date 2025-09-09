@@ -97,7 +97,7 @@ const Carousel = () => {
             >
               <div 
                 className="background-overlay"
-                style={{ backgroundColor: slide.overlay }}
+                // style={{ backgroundColor: slide.overlay }}
               ></div>
             </div>
             

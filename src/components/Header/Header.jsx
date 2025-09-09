@@ -25,9 +25,11 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <div className="logo-icon">🌴</div>
+            <div className="logo-icon">
+              <span className="logo-letter">C</span>
+            </div>
             <div className="logo-text">
-              <h1>Puleero</h1>
+              <h1>CocoWood</h1>
               <span className="tagline">Natural Timber Solutions</span>
             </div>
           </div>

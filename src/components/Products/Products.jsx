@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./Products.css";
+import ProductModal from "./ProductModal";
+import WhatsAppButton from '../WhatsAppButton';
 
 const Products = () => {
   const [activeCategory, setActiveCategory] = useState('all');
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const categories = [
     { id: 'all', name: 'All Products', icon: '🏠' },
@@ -73,6 +77,16 @@ const Products = () => {
     ? products 
     : products.filter(product => product.category === activeCategory);
 
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
+
   return (
     <section id="products" className="products">
       <div className="container">
@@ -99,7 +113,11 @@ const Products = () => {
 
         <div className="products-grid">
           {filteredProducts.map((product, index) => (
-            <div key={product.id} className="product-card fade-in-up">
+            <div 
+              key={product.id} 
+              className="product-card fade-in-up"
+              onClick={() => handleProductClick(product)}
+            >
               <div className="product-image">
                 <img src={product.image} alt={product.name} loading="lazy" />
                 <div className="product-badge">Premium Quality</div>
@@ -113,14 +131,22 @@ const Products = () => {
                 <p className="product-description">{product.description}</p>
                 
                 <div className="product-features">
-                  {product.features.map((feature, idx) => (
+                  {product.features.slice(0, 3).map((feature, idx) => (
                     <span key={idx} className="feature-tag">{feature}</span>
                   ))}
                 </div>
                 
                 <div className="product-footer">
                   <span className="product-price">{product.price}</span>
-                  <button className="btn btn-secondary">View Details</button>
+                  <button 
+                    className="btn btn-secondary"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleProductClick(product);
+                    }}
+                  >
+                    View Details
+                  </button>
                 </div>
               </div>
             </div>
@@ -133,6 +159,14 @@ const Products = () => {
           <button className="btn">Get Custom Quote</button>
         </div>
       </div>
+
+      {/* Product Modal */}
+      <ProductModal
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
+      <WhatsAppButton />
     </section>
   );
 };

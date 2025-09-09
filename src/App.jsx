@@ -7,6 +7,7 @@ import Products from "./components/Products/Products";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import "./components/style.css";
+import LocationMap from "./components/Contact/LocationMap";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Products />
       <About />
       <WhyChooseUs />
+      <LocationMap />
       {/* <Contact /> */}
       <Footer />
     </div>
