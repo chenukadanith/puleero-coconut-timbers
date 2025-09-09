@@ -1,0 +1,148 @@
+.why-choose-us {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #fafafa 0%, #f4e1c1 100%);
+  }
+  
+  .why-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .why-header h2 {
+    margin-bottom: 1rem;
+    color: #8B4513;
+  }
+  
+  .why-header p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .reason-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .reason-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .reason-icon {
+    flex-shrink: 0;
+  }
+  
+  .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+  }
+  
+  .reason-content {
+    flex: 1;
+  }
+  
+  .reason-content h3 {
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .reason-content p {
+    color: #2c3e50;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .reason-stats {
+    margin-top: 1rem;
+  }
+  
+  .stats-badge {
+    background: #f4e1c1;
+    color: #8B4513;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .why-cta {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-content h3 {
+    color: #8B4513;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+  
+  .cta-content p {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .why-choose-us {
+      padding: 60px 0;
+    }
+    
+    .reasons-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .reason-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    
+    .icon-wrapper {
+      align-self: center;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .why-cta {
+      padding: 2rem;
+    }
+  }
