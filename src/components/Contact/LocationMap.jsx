@@ -7,60 +7,18 @@ const LocationMap = () => {
 
   return (
     <section id="location" className="location-section">
-      <div className="location-container">
-        <div className="location-header">
-          <h2>Find Us</h2>
-          <p>Showroom around Galle Road, Colombo 03 — easy access by bus and train.</p>
-        </div>
-
-        <div className="location-grid">
-          <div className="location-card">
-            <div className="location-map">
-              <iframe
-                title="Business location map"
-                src={mapEmbedSrc}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-
-          <div className="location-side">
-            <div className="info-block">
-              <div className="info-icon">📍</div>
-              <div>
-                <h4>Address</h4>
-                <p>No. 45, Galle Road, Colombo 03</p>
-              </div>
-            </div>
-            <div className="info-block">
-              <div className="info-icon">📞</div>
-              <div>
-                <h4>Phone</h4>
-                <p><a href="tel:+94771234567">+94 77 123 4567</a></p>
-              </div>
-            </div>
-            <div className="info-block">
-              <div className="info-icon">✉️</div>
-              <div>
-                <h4>Email</h4>
-                <p><a href="mailto:info@cocowood.lk">info@cocowood.lk</a></p>
-              </div>
-            </div>
-            <div className="actions">
-              <a
-                className="loc-btn primary"
-                href="https://www.google.com/maps/dir//6.927148,79.84885"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get Directions
-              </a>
-              <a className="loc-btn" href="tel:+94771234567">Call Now</a>
-            </div>
-          </div>
-        </div>
+      <div className="location-header">
+        <h2>Contact Us</h2>
+        <p>Showroom around Galle Road, Colombo 03 — easy access by bus and train.</p>
+      </div>
+      <div className="modern-map-wrapper">
+        <iframe
+          title="Business location map"
+          src={mapEmbedSrc}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        ></iframe>
       </div>
     </section>
   );

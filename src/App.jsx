@@ -16,7 +16,7 @@ function App() {
       <Carousel />
       <Products />
       <About />
-      <WhyChooseUs />
+      {/* <WhyChooseUs /> */}
       <LocationMap />
       {/* <Contact /> */}
       <Footer />

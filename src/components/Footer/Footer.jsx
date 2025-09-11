@@ -41,12 +41,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="socials">
-        <a href="#">🌐</a>
-        <a href="#">📘</a>
-        <a href="#">🐦</a>
-        <a href="#">📸</a>
-      </div>
+    
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Puleero Coconut Timbers. All Rights Reserved.</p>

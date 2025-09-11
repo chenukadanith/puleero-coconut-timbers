@@ -9,7 +9,7 @@ const Products = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const categories = [
-    { id: 'all', name: 'All Products', icon: '🏠' },
+    { id: 'all', name: 'All', icon: '🏠' },
     { id: 'furniture', name: 'Furniture', icon: '🪑' },
     { id: 'flooring', name: 'Flooring', icon: '🏠' },
     { id: 'decorative', name: 'Decorative', icon: '🎨' },
@@ -23,7 +23,7 @@ const Products = () => {
       category: "furniture",
       description: "Handcrafted dining chairs with natural coconut timber finish, featuring ergonomic design and superior comfort",
       price: "From $89",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=500&h=400&fit=crop&crop=center",
       features: ["Termite Resistant", "Natural Finish", "Ergonomic Design", "Handcrafted"]
     },
     {
@@ -32,7 +32,7 @@ const Products = () => {
       category: "furniture",
       description: "Sturdy dining and coffee tables made from premium coconut timber with unique grain patterns",
       price: "From $299",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=500&h=400&fit=crop&crop=center",
       features: ["Durable Construction", "Unique Grain Pattern", "Easy Maintenance", "Custom Sizes"]
     },
     {
@@ -41,7 +41,7 @@ const Products = () => {
       category: "flooring",
       description: "Beautiful flooring tiles with natural coconut timber texture, perfect for modern and traditional spaces",
       price: "From $45/sq ft",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=500&h=400&fit=crop&crop=center",
       features: ["Moisture Resistant", "Easy Installation", "Natural Beauty", "Eco-Friendly"]
     },
     {
@@ -50,7 +50,7 @@ const Products = () => {
       category: "construction",
       description: "High-quality skirting boards for elegant interior finishing with precision-cut edges",
       price: "From $25/linear ft",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1503389152951-9c3d0bca6c94?w=500&h=400&fit=crop&crop=center",
       features: ["Precision Cut", "Smooth Finish", "Long Lasting", "Multiple Profiles"]
     },
     {
@@ -59,7 +59,7 @@ const Products = () => {
       category: "decorative",
       description: "Stunning decorative wall panels to enhance your interior design with natural texture",
       price: "From $75/sq ft",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?w=500&h=400&fit=crop&crop=center",
       features: ["Design Flexibility", "Natural Texture", "Easy Installation", "Custom Patterns"]
     },
     {
@@ -68,7 +68,7 @@ const Products = () => {
       category: "construction",
       description: "Heavy-duty structural beams for traditional and modern construction projects",
       price: "From $120/linear ft",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=400&fit=crop&crop=center",
+      image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=500&h=400&fit=crop&crop=center",
       features: ["High Strength", "Weather Resistant", "Sustainable", "Load Bearing"]
     }
   ];
@@ -120,7 +120,6 @@ const Products = () => {
             >
               <div className="product-image">
                 <img src={product.image} alt={product.name} loading="lazy" />
-                <div className="product-badge">Premium Quality</div>
                 <div className="product-overlay">
                   <button className="btn btn-primary">Quick View</button>
                 </div>
@@ -156,7 +155,14 @@ const Products = () => {
         <div className="products-cta fade-in-up">
           <h3>Need a Custom Solution?</h3>
           <p>We specialize in custom coconut timber products tailored to your specific requirements.</p>
-          <button className="btn">Get Custom Quote</button>
+          <a
+            className="btn"
+            href="https://wa.me/919876543210?text=I%20am%20interested%20in%20a%20custom%20coconut%20timber%20solution."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Custom Quote
+          </a>
         </div>
       </div>
 
